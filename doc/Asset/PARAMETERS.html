@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Asset::PARAMETERS
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Asset::PARAMETERS";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Asset.html" title="Asset (class)">Asset</a></span></span>
+     &raquo; 
+    <span class="title">PARAMETERS</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Asset::PARAMETERS
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/models/asset.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>O módulo <span class='object_link'><a href="" title="Asset::PARAMETERS (module)">PARAMETERS</a></span> define as probabilidades de ocorrências de três cenários:</p>
+
+<pre class="code ruby"><code class="ruby">* Otimista: 30% de chance de ocorrência
+* Regular: 40% de chance de ocorrência
+* Pessimista: 30% de chance de ocorrência
+</code></pre>
+
+<p>e, baseando-se nestes cenários, são definidos os multiplicadores dos retornos:</p>
+
+<pre class="code ruby"><code class="ruby">* Otimista: 15% de ganho comparado ao cenário regular
+* Regular: Baliza os ganhos dos outros cenários. Seu valor é baseado no ganho efetivo.
+* Pessimista: 25% de perda comparado ao cenário regular
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="OPTIMISTIC_PROBABILITY-constant" class="">OPTIMISTIC_PROBABILITY =
+          
+        </dt>
+        <dd><pre class="code"><span class='float'>0.3</span></pre></dd>
+      
+        <dt id="REGULAR_PROBABILITY-constant" class="">REGULAR_PROBABILITY =
+          
+        </dt>
+        <dd><pre class="code"><span class='float'>0.4</span></pre></dd>
+      
+        <dt id="PESSIMISTIC_PROBABILITY-constant" class="">PESSIMISTIC_PROBABILITY =
+          
+        </dt>
+        <dd><pre class="code"><span class='float'>0.3</span></pre></dd>
+      
+        <dt id="CENARIES_PROBABILITY-constant" class="">CENARIES_PROBABILITY =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#OPTIMISTIC_PROBABILITY-constant" title="Asset::PARAMETERS::OPTIMISTIC_PROBABILITY (constant)">OPTIMISTIC_PROBABILITY</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REGULAR_PROBABILITY-constant" title="Asset::PARAMETERS::REGULAR_PROBABILITY (constant)">REGULAR_PROBABILITY</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#PESSIMISTIC_PROBABILITY-constant" title="Asset::PARAMETERS::PESSIMISTIC_PROBABILITY (constant)">PESSIMISTIC_PROBABILITY</a></span></span><span class='rbracket'>]</span></pre></dd>
+      
+        <dt id="REGULAR_MULTIPLIER-constant" class="">REGULAR_MULTIPLIER =
+          
+        </dt>
+        <dd><pre class="code"><span class='float'>1.0</span></pre></dd>
+      
+        <dt id="OPTIMISTIC_MULTIPLIER-constant" class="">OPTIMISTIC_MULTIPLIER =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#REGULAR_MULTIPLIER-constant" title="Asset::PARAMETERS::REGULAR_MULTIPLIER (constant)">REGULAR_MULTIPLIER</a></span></span> <span class='op'>+</span> <span class='float'>0.15</span></pre></dd>
+      
+        <dt id="PESSIMISTIC_MULTIPLIER-constant" class="">PESSIMISTIC_MULTIPLIER =
+          
+        </dt>
+        <dd><pre class="code"><span class='op'>-</span> <span class='const'><span class='object_link'><a href="#REGULAR_MULTIPLIER-constant" title="Asset::PARAMETERS::REGULAR_MULTIPLIER (constant)">REGULAR_MULTIPLIER</a></span></span> <span class='op'>*</span> <span class='float'>0.25</span></pre></dd>
+      
+        <dt id="CENARIES_MULTIPLIERS-constant" class="">CENARIES_MULTIPLIERS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#OPTIMISTIC_MULTIPLIER-constant" title="Asset::PARAMETERS::OPTIMISTIC_MULTIPLIER (constant)">OPTIMISTIC_MULTIPLIER</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REGULAR_MULTIPLIER-constant" title="Asset::PARAMETERS::REGULAR_MULTIPLIER (constant)">REGULAR_MULTIPLIER</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#PESSIMISTIC_MULTIPLIER-constant" title="Asset::PARAMETERS::PESSIMISTIC_MULTIPLIER (constant)">PESSIMISTIC_MULTIPLIER</a></span></span><span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Dec 12 23:34:22 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.4).
+</div>
+
+    </div>
+  </body>
+</html>
