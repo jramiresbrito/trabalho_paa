@@ -1,0 +1,6 @@
+# Ignore coverage files
+coverage
+# Ignore Debug History
+.byebug_history
+# Ignore Yard setup
+.yardoc
